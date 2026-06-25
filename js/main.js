@@ -1,24 +1,23 @@
 /* =========================================================
-        TEXUVO WEBSITE VERSION 5.0
+        TEXUVO WEBSITE VERSION 5.1 (Fixed)
 ========================================================= */
 
-/* Sticky Navigation */
+
+/* =======================================
+        Sticky Navigation
+======================================= */
 
 const navbar = document.getElementById("navbar");
 
-window.addEventListener("scroll", () => {
-
-if(window.scrollY > 80){
-
-navbar.classList.add("sticky");
-
-}else{
-
-navbar.classList.remove("sticky");
-
+if (navbar) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 80) {
+      navbar.classList.add("sticky");
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  });
 }
-
-});
 
 
 /* =======================================
@@ -26,176 +25,141 @@ navbar.classList.remove("sticky");
 ======================================= */
 
 const menuToggle = document.getElementById("menu-toggle");
-
 const navigation = document.querySelector(".navigation");
 
-menuToggle.addEventListener("click",()=>{
+if (menuToggle && navigation) {
+  menuToggle.addEventListener("click", () => {
+    navigation.classList.toggle("active");
+    menuToggle.classList.toggle("active");
+  });
 
-navigation.classList.toggle("active");
-
-menuToggle.classList.toggle("active");
-
-});
+  // FIX: Close menu when a nav link is clicked (mobile UX)
+  document.querySelectorAll(".navigation a").forEach(link => {
+    link.addEventListener("click", () => {
+      navigation.classList.remove("active");
+      menuToggle.classList.remove("active");
+    });
+  });
+}
 
 
 /* =======================================
         Smooth Scroll
 ======================================= */
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
-
-anchor.addEventListener("click",function(e){
-
-e.preventDefault();
-
-document.querySelector(this.getAttribute("href"))
-
-.scrollIntoView({
-
-behavior:"smooth"
-
-});
-
-});
-
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    const target = document.querySelector(this.getAttribute("href"));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  });
 });
 
 
 /* =======================================
         Back To Top
+        FIX: Added null check before attaching listener
 ======================================= */
 
-const backToTop=document.getElementById("backToTop");
+const backToTop = document.getElementById("backToTop");
 
-window.addEventListener("scroll",()=>{
+if (backToTop) {
+  window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 500) {
+      backToTop.classList.add("show");
+    } else {
+      backToTop.classList.remove("show");
+    }
+  });
 
-if(window.pageYOffset>500){
-
-backToTop.classList.add("show");
-
-}else{
-
-backToTop.classList.remove("show");
-
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 }
-
-});
-
-backToTop.addEventListener("click",()=>{
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
-
-});
-
-});
 
 
 /* =======================================
         Reveal Animation
 ======================================= */
 
-const reveal=document.querySelectorAll(".section");
+const revealSections = document.querySelectorAll(".section");
 
-window.addEventListener("scroll",()=>{
+const revealOnScroll = () => {
+  const trigger = window.innerHeight * 0.88;
+  revealSections.forEach(section => {
+    const top = section.getBoundingClientRect().top;
+    if (top < trigger) {
+      section.classList.add("active");
+    }
+  });
+};
 
-const trigger=window.innerHeight*0.85;
-
-reveal.forEach(section=>{
-
-const top=section.getBoundingClientRect().top;
-
-if(top<trigger){
-
-section.classList.add("active");
-
-}
-
-});
-
-});
+// Run on load to activate any already-visible sections
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll(); // initial check
 
 
 /* =======================================
         Counter Animation
+        FIX: Used getBoundingClientRect() for reliable trigger;
+             Skip non-numeric stat boxes (e.g. "Pan India", "B2B")
 ======================================= */
 
-const counters=document.querySelectorAll(".stat-box h2");
+const counters = document.querySelectorAll(".stat-box h2");
+let counterStarted = false;
 
-let started=false;
+const startCounters = () => {
+  const statsSection = document.querySelector(".quick-stats");
+  if (!statsSection || counterStarted) return;
 
-window.addEventListener("scroll",()=>{
+  const rect = statsSection.getBoundingClientRect();
+  if (rect.top < window.innerHeight * 0.9) {
+    counterStarted = true;
 
-const stats=document.querySelector(".quick-stats");
+    counters.forEach(counter => {
+      const originalText = counter.innerText.trim();
+      const numericMatch = originalText.match(/(\d+)/);
 
-if(!stats) return;
+      // FIX: Skip non-numeric stats like "Pan India" or "B2B"
+      if (!numericMatch) return;
 
-const top=stats.offsetTop;
+      const target = parseInt(numericMatch[1], 10);
+      const suffix = originalText.replace(/\d+/, "").trim(); // e.g. "+" or "%"
+      let current = 0;
+      const increment = Math.ceil(target / 80);
 
-if(window.pageYOffset>top-500 && !started){
+      const update = () => {
+        current = Math.min(current + increment, target);
+        counter.innerText = current + suffix;
+        if (current < target) {
+          setTimeout(update, 25);
+        }
+      };
 
-started=true;
-
-counters.forEach(counter=>{
-
-const update=()=>{
-
-const target=counter.innerText.replace(/\D/g,'');
-
-if(target==="") return;
-
-const value=+counter.innerText.replace(/\D/g,'');
-
-const increment=Math.ceil(target/80);
-
-if(value<target){
-
-counter.innerText=(value+increment);
-
-setTimeout(update,25);
-
-}else{
-
-counter.innerText=target+"+";
-
-}
-
+      counter.innerText = "0" + suffix;
+      update();
+    });
+  }
 };
 
-update();
-
-});
-
-}
-
-});
+window.addEventListener("scroll", startCounters);
+startCounters(); // initial check in case stats already visible
 
 
 /* =======================================
         Contact Form
 ======================================= */
 
-const form=document.getElementById("queryForm");
+const form = document.getElementById("queryForm");
 
-if(form){
-
-form.addEventListener("submit",(e)=>{
-
-e.preventDefault();
-
-alert(
-
-"Thank you for contacting Texuvo. Our team will get back to you shortly."
-
-);
-
-form.reset();
-
-});
-
+if (form) {
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    alert("Thank you for contacting Texuvo. Our team will get back to you shortly.");
+    form.reset();
+  });
 }
 
 
@@ -203,7 +167,10 @@ form.reset();
         Footer Year
 ======================================= */
 
-document.getElementById("year").innerHTML=new Date().getFullYear();
+const yearEl = document.getElementById("year");
+if (yearEl) {
+  yearEl.innerHTML = new Date().getFullYear();
+}
 
 
 /* =======================================
@@ -211,17 +178,11 @@ document.getElementById("year").innerHTML=new Date().getFullYear();
 ======================================= */
 
 console.log(
-
-"%cWelcome to TEXUVO",
-
-"color:green;font-size:24px;font-weight:bold"
-
+  "%cWelcome to TEXUVO",
+  "color:green;font-size:24px;font-weight:bold"
 );
 
 console.log(
-
-"%cReliable Waste Sourcing for Circular Economy Solutions",
-
-"font-size:14px"
-
+  "%cReliable Waste Sourcing for Circular Economy Solutions",
+  "font-size:14px"
 );
