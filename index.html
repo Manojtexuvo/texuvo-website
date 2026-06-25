@@ -1,576 +1,694 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Texuvo Recycling Solution Pvt. Ltd. | Waste Sourcing & Recycling Partner</title>
-<meta name="description" content="Texuvo Recycling Solution Pvt. Ltd. connects waste generators, recyclers and manufacturers through sustainable waste sourcing and resource recovery solutions.">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --green-dark:#0a1f19;
-  --green-mid:#0f2f27;
-  --green-card:#123d32;
-  --green-accent:#80d4a4;
-  --green-light:#b4e8c8;
-  --text-primary:#f0f7f4;
-  --text-muted:#9ac4b0;
-  --white:#ffffff;
-}
-html{scroll-behavior:smooth}
-body{background:var(--green-dark);color:var(--text-primary);font-family:'Inter',sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Texuvo Recycling Solution Pvt. Ltd. — India's trusted solid waste sourcing and recycling partner connecting waste generators, recyclers and manufacturers." />
+  <meta name="keywords" content="solid waste management, recycling India, waste sourcing, Texuvo, textile scrap, paper waste, plastic recycling, metal scrap" />
+  <meta property="og:title" content="Texuvo Recycling Solution Pvt. Ltd." />
+  <meta property="og:description" content="India's trusted solid waste sourcing and recycling partner." />
+  <title>Texuvo Recycling Solution Pvt. Ltd. | Solid Waste Management</title>
 
-/* NAV */
-header{position:fixed;top:0;width:100%;z-index:100;transition:background 0.3s,backdrop-filter 0.3s;padding:0 2rem}
-header.scrolled{background:rgba(10,31,25,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(128,212,164,0.12)}
-.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:72px}
-.logo-img{height:52px;width:auto}
-nav{display:flex;align-items:center;gap:2rem}
-nav a{color:var(--text-muted);text-decoration:none;font-size:14px;font-weight:500;letter-spacing:0.02em;transition:color 0.2s}
-nav a:hover{color:var(--green-accent)}
-.nav-cta{background:var(--green-accent);color:var(--green-dark)!important;padding:8px 22px;border-radius:50px;font-weight:600;font-size:14px;transition:background 0.2s,transform 0.1s!important}
-.nav-cta:hover{background:var(--white);transform:translateY(-1px)}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
-.hamburger span{display:block;width:22px;height:2px;background:var(--text-primary);border-radius:2px;transition:0.3s}
-.mobile-nav{display:none;position:fixed;top:72px;left:0;width:100%;background:rgba(10,31,25,0.97);backdrop-filter:blur(16px);padding:1.5rem 2rem;flex-direction:column;gap:1rem;border-bottom:1px solid rgba(128,212,164,0.12)}
-.mobile-nav.open{display:flex}
-.mobile-nav a{color:var(--text-primary);text-decoration:none;font-size:16px;font-weight:500;padding:0.5rem 0;border-bottom:1px solid rgba(128,212,164,0.08)}
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
 
-/* HERO */
-.hero{min-height:100vh;display:flex;align-items:center;padding:0 2rem;position:relative;overflow:hidden}
-.hero-bg-layer{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,31,25,0.97) 0%,rgba(15,47,39,0.9) 60%,rgba(18,61,50,0.85) 100%);z-index:0}
-.hero-pattern{position:absolute;inset:0;background-image:radial-gradient(circle at 20% 50%, rgba(128,212,164,0.06) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(128,212,164,0.04) 0%, transparent 40%);z-index:0}
-.hero-image-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;opacity:0.08;z-index:0}
-.hero-content{position:relative;z-index:1;max-width:1200px;margin:0 auto;width:100%;padding:120px 0 80px}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(128,212,164,0.1);border:1px solid rgba(128,212,164,0.25);color:var(--green-accent);font-size:13px;font-weight:500;padding:6px 16px;border-radius:50px;margin-bottom:2rem;letter-spacing:0.04em}
-.hero-badge::before{content:'';width:6px;height:6px;background:var(--green-accent);border-radius:50%;animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
-h1{font-family:'Syne',sans-serif;font-size:clamp(2.4rem,5.5vw,4.2rem);font-weight:800;line-height:1.1;letter-spacing:-0.02em;margin-bottom:1.5rem}
-h1 .accent{color:var(--green-accent)}
-.hero-sub{font-size:clamp(1rem,2vw,1.2rem);color:var(--text-muted);max-width:560px;line-height:1.7;margin-bottom:2.5rem}
-.hero-actions{display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:4rem}
-.btn-primary{background:var(--green-accent);color:var(--green-dark);padding:14px 32px;border-radius:50px;font-weight:700;font-size:15px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:background 0.2s,transform 0.15s}
-.btn-primary:hover{background:var(--white);transform:translateY(-2px)}
-.btn-outline{border:1.5px solid rgba(128,212,164,0.4);color:var(--green-accent);padding:14px 32px;border-radius:50px;font-weight:600;font-size:15px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:border-color 0.2s,background 0.2s}
-.btn-outline:hover{border-color:var(--green-accent);background:rgba(128,212,164,0.06)}
-.hero-stats{display:flex;gap:3rem;flex-wrap:wrap}
-.stat-item{}
-.stat-num{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--green-accent)}
-.stat-label{font-size:13px;color:var(--text-muted);margin-top:2px}
-
-/* MARQUEE */
-.marquee-section{background:var(--green-card);border-top:1px solid rgba(128,212,164,0.08);border-bottom:1px solid rgba(128,212,164,0.08);padding:1rem 0;overflow:hidden}
-.marquee-track{display:flex;gap:3rem;width:max-content;animation:scroll 25s linear infinite}
-.marquee-track:hover{animation-play-state:paused}
-@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.marquee-item{display:flex;align-items:center;gap:10px;white-space:nowrap;color:var(--text-muted);font-size:13px;font-weight:500}
-.marquee-dot{width:5px;height:5px;background:var(--green-accent);border-radius:50%;flex-shrink:0}
-
-/* SECTIONS */
-section{padding:6rem 2rem}
-.container{max-width:1200px;margin:0 auto}
-.section-label{font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--green-accent);margin-bottom:1rem}
-.section-title{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;line-height:1.15;margin-bottom:1.25rem}
-.section-sub{color:var(--text-muted);max-width:560px;font-size:1rem;line-height:1.7}
-.centered{text-align:center}
-.centered .section-sub{margin:0 auto}
-
-/* ABOUT */
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;margin-top:4rem}
-.about-visual{background:var(--green-card);border-radius:24px;border:1px solid rgba(128,212,164,0.12);padding:2.5rem;display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.about-stat-card{background:var(--green-mid);border-radius:16px;padding:1.5rem;border:1px solid rgba(128,212,164,0.08)}
-.about-stat-card .num{font-family:'Syne',sans-serif;font-size:1.8rem;font-weight:800;color:var(--green-accent)}
-.about-stat-card .lbl{font-size:13px;color:var(--text-muted);margin-top:4px}
-.about-icon{width:40px;height:40px;background:rgba(128,212,164,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem}
-.about-icon svg{width:20px;height:20px;stroke:var(--green-accent)}
-
-/* MATERIALS */
-.materials-section{background:var(--green-card)}
-.materials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.5rem}
-.mat-card{background:var(--green-mid);border-radius:20px;padding:2rem;border:1px solid rgba(128,212,164,0.08);transition:border-color 0.3s,transform 0.3s;cursor:default;position:relative;overflow:hidden}
-.mat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green-accent),transparent);opacity:0;transition:opacity 0.3s}
-.mat-card:hover{border-color:rgba(128,212,164,0.3);transform:translateY(-6px)}
-.mat-card:hover::before{opacity:1}
-.mat-icon{width:48px;height:48px;background:rgba(128,212,164,0.1);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem}
-.mat-icon svg{width:24px;height:24px;stroke:var(--green-accent);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.mat-card h3{font-family:'Syne',sans-serif;font-size:1.15rem;font-weight:700;margin-bottom:0.6rem}
-.mat-card p{font-size:14px;color:var(--text-muted);line-height:1.6}
-
-/* VALUE */
-.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.5rem}
-.val-card{background:var(--green-card);border-radius:20px;padding:2rem 2rem 2.5rem;border:1px solid rgba(128,212,164,0.1)}
-.val-num{font-family:'Syne',sans-serif;font-size:3rem;font-weight:800;color:rgba(128,212,164,0.15);line-height:1;margin-bottom:1rem}
-.val-card h3{font-family:'Syne',sans-serif;font-size:1.15rem;font-weight:700;margin-bottom:0.75rem;color:var(--green-accent)}
-.val-card p{font-size:14px;color:var(--text-muted);line-height:1.7}
-
-/* WHY */
-.why-section{background:var(--green-card)}
-.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:3rem;max-width:800px;margin-left:auto;margin-right:auto}
-.why-item{display:flex;align-items:center;gap:12px;background:var(--green-mid);border-radius:14px;padding:1.1rem 1.4rem;border:1px solid rgba(128,212,164,0.08);font-size:14px;font-weight:500}
-.check{width:22px;height:22px;background:rgba(128,212,164,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.check svg{width:12px;height:12px;stroke:var(--green-accent);stroke-width:2.5;fill:none}
-
-/* VISION */
-.vision-section{text-align:center}
-.vision-box{background:linear-gradient(135deg,var(--green-card),rgba(18,61,50,0.6));border:1px solid rgba(128,212,164,0.15);border-radius:24px;padding:4rem 3rem;margin-top:3rem;position:relative;overflow:hidden}
-.vision-box::after{content:'"';position:absolute;right:3rem;top:1rem;font-size:12rem;font-family:'Syne',sans-serif;color:rgba(128,212,164,0.05);line-height:1;pointer-events:none}
-.vision-box p{font-size:1.15rem;line-height:1.8;color:var(--text-muted);max-width:680px;margin:0 auto;position:relative;z-index:1}
-
-/* CONTACT */
-.contact-section{background:var(--green-card)}
-.contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:4rem;margin-top:3.5rem;align-items:start}
-.contact-info{}
-.contact-info p{color:var(--text-muted);line-height:1.7;margin-bottom:2rem}
-.contact-channels{display:flex;flex-direction:column;gap:1rem}
-.channel{display:flex;align-items:center;gap:14px;background:var(--green-mid);border-radius:14px;padding:1.1rem 1.4rem;border:1px solid rgba(128,212,164,0.08);text-decoration:none;color:var(--text-primary);transition:border-color 0.2s}
-.channel:hover{border-color:rgba(128,212,164,0.3)}
-.ch-icon{width:40px;height:40px;background:rgba(128,212,164,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.ch-icon svg{width:18px;height:18px;stroke:var(--green-accent);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.ch-label{font-size:12px;color:var(--text-muted);margin-bottom:2px}
-.ch-val{font-size:14px;font-weight:500;color:var(--green-accent)}
-
-/* FORM */
-.contact-form{background:var(--green-mid);border-radius:20px;padding:2rem;border:1px solid rgba(128,212,164,0.1)}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
-.form-group{display:flex;flex-direction:column;gap:6px}
-.form-group label{font-size:13px;font-weight:500;color:var(--text-muted)}
-.form-group input,.form-group select,.form-group textarea{background:var(--green-card);border:1px solid rgba(128,212,164,0.12);border-radius:10px;padding:11px 14px;color:var(--text-primary);font-size:14px;font-family:'Inter',sans-serif;outline:none;transition:border-color 0.2s;width:100%}
-.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:rgba(128,212,164,0.45)}
-.form-group select option{background:var(--green-card)}
-.form-group textarea{resize:vertical;min-height:100px}
-.form-full{grid-column:1/-1}
-.form-submit{background:var(--green-accent);color:var(--green-dark);padding:13px 28px;border:none;border-radius:50px;font-weight:700;font-size:15px;cursor:pointer;width:100%;margin-top:0.5rem;transition:background 0.2s,transform 0.15s;font-family:'Inter',sans-serif}
-.form-submit:hover{background:var(--white);transform:translateY(-1px)}
-
-/* WHATSAPP FLOAT */
-.wa-float{position:fixed;bottom:28px;right:28px;background:#25D366;color:#fff;padding:13px 22px;border-radius:50px;font-weight:700;font-size:14px;text-decoration:none;z-index:200;box-shadow:0 4px 20px rgba(37,211,102,0.35);display:flex;align-items:center;gap:8px;transition:transform 0.2s,box-shadow 0.2s}
-.wa-float:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(37,211,102,0.45)}
-.wa-float svg{width:20px;height:20px;fill:#fff}
-
-/* FOOTER */
-footer{background:var(--green-dark);border-top:1px solid rgba(128,212,164,0.08);padding:3rem 2rem}
-.footer-inner{max-width:1200px;margin:0 auto;text-align:center}
-.footer-logo{height:48px;margin:0 auto 1rem}
-.footer-tagline{font-size:13px;color:var(--text-muted);margin-bottom:1.5rem;letter-spacing:0.05em}
-.footer-links{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;margin-bottom:2rem}
-.footer-links a{font-size:13px;color:var(--text-muted);text-decoration:none;transition:color 0.2s}
-.footer-links a:hover{color:var(--green-accent)}
-.footer-copy{font-size:12px;color:rgba(154,196,176,0.4)}
-
-/* REVEAL ANIMATION */
-.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.6s ease,transform 0.6s ease}
-.reveal.visible{opacity:1;transform:translateY(0)}
-.reveal-delay-1{transition-delay:0.1s}
-.reveal-delay-2{transition-delay:0.2s}
-.reveal-delay-3{transition-delay:0.3s}
-
-/* RESPONSIVE */
-@media(max-width:900px){
-  .about-grid,.contact-grid{grid-template-columns:1fr}
-  .materials-grid,.value-grid{grid-template-columns:1fr 1fr}
-}
-@media(max-width:600px){
-  nav.desktop-nav{display:none}
-  .hamburger{display:flex}
-  .materials-grid,.value-grid,.why-grid,.form-row{grid-template-columns:1fr}
-  .hero-stats{gap:1.5rem}
-  .about-visual{grid-template-columns:1fr}
-}
-</style>
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-<!-- NAV -->
-<header id="site-header">
+<!-- ═══════════════════════════════════════════
+     NAVBAR
+═══════════════════════════════════════════ -->
+<header id="navbar" role="banner">
   <div class="nav-inner">
-    <img src="TEXUVO__2__Final-removebg-preview 1.png" alt="Texuvo" class="logo-img">
-    <nav class="desktop-nav">
-      <a href="#home">Home</a>
+
+    <a href="#hero" class="nav-logo" aria-label="Texuvo Home">
+      <img src="TEXUVO__2__Final-removebg-preview 1.png" alt="Texuvo Recycling Solution" />
+    </a>
+
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#hero">Home</a>
       <a href="#about">About</a>
+      <a href="#profile">Company</a>
       <a href="#materials">Materials</a>
-      <a href="#value">Value</a>
-      <a href="#contact" class="nav-cta">Contact Us</a>
+      <a href="#query">Query</a>
+      <a href="#contact">Contact</a>
     </nav>
-    <button class="hamburger" id="hamburger" aria-label="Open menu">
+
+    <div class="nav-actions">
+      <button class="nav-login-btn" data-open-login aria-haspopup="dialog">Login / Register</button>
+      <a href="#query" class="btn btn-primary" style="font-size:13px;padding:9px 22px;">Get a Quote</a>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
       <span></span><span></span><span></span>
     </button>
   </div>
 </header>
-<div class="mobile-nav" id="mobile-nav">
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#materials">Materials</a>
-  <a href="#value">Value</a>
-  <a href="#contact">Contact Us</a>
-</div>
 
-<!-- HERO -->
-<section id="home" class="hero">
-  <div class="hero-image-bg"></div>
-  <div class="hero-bg-layer"></div>
-  <div class="hero-pattern"></div>
+<!-- Mobile Menu -->
+<nav id="mobile-menu" aria-label="Mobile navigation">
+  <a href="#hero">Home</a>
+  <a href="#about">About</a>
+  <a href="#profile">Company Profile</a>
+  <a href="#materials">Materials</a>
+  <a href="#query">Submit a Query</a>
+  <a href="#contact">Contact</a>
+  <a href="#" data-open-login class="mob-cta">Login / Register</a>
+</nav>
+
+
+<!-- ═══════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════ -->
+<section id="hero" aria-label="Hero">
+  <div class="hero-bg-img"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-glow"></div>
+
   <div class="hero-content">
-    <div class="hero-badge">🌿 India's Circular Economy Partner</div>
-    <h1>Waste Sourcing &<br><span class="accent">Recycling Solutions</span><br>Built for India</h1>
-    <p class="hero-sub">We connect waste generators, recyclers, and manufacturers through reliable sourcing networks — ensuring continuous material flow for sustainable resource recovery.</p>
+
+    <div class="hero-badge">
+      <span class="pulse-dot"></span>
+      Solid Waste Management — India
+    </div>
+
+    <h1 class="hero-heading">
+      Connecting Waste<br />
+      <span class="line-accent">Generators &amp; Recyclers</span><br />
+      Across India
+    </h1>
+
+    <p class="hero-desc">
+      Texuvo Recycling Solution Pvt. Ltd. is India's trusted solid waste sourcing
+      and recycling partner — building a circular economy through reliable material
+      networks, resource recovery, and responsible waste management.
+    </p>
+
     <div class="hero-actions">
-      <a href="#contact" class="btn-primary">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v3h-.08"/></svg>
-        Get In Touch
+      <a href="#query" class="btn btn-primary">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v3h-.08"/></svg>
+        Submit a Query
       </a>
-      <a href="https://wa.me/919311503676" target="_blank" class="btn-outline">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      <a href="https://wa.me/919311503676" target="_blank" rel="noopener" class="btn btn-outline">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         WhatsApp Us
       </a>
+      <a href="#about" class="btn btn-ghost">Learn More →</a>
     </div>
+
     <div class="hero-stats">
-      <div class="stat-item">
-        <div class="stat-num" data-count="500">500+</div>
-        <div class="stat-label">Tonnes Processed</div>
+      <div class="h-stat">
+        <div class="h-stat-num">
+          <span data-count="500" data-suffix="+">0+</span>
+        </div>
+        <div class="h-stat-label">Tonnes Sourced</div>
       </div>
-      <div class="stat-item">
-        <div class="stat-num" data-count="6">6+</div>
-        <div class="stat-label">Material Categories</div>
+      <div class="h-stat">
+        <div class="h-stat-num">
+          <span data-count="6" data-suffix="">0</span>
+        </div>
+        <div class="h-stat-label">Material Categories</div>
       </div>
-      <div class="stat-item">
-        <div class="stat-num" data-count="100">16%</div>
-        <div class="stat-label">Pan India Reach</div>
+      <div class="h-stat">
+        <div class="h-stat-num">
+          <span data-count="28" data-suffix="+">0+</span>
+        </div>
+        <div class="h-stat-label">States Covered</div>
+      </div>
+      <div class="h-stat">
+        <div class="h-stat-num">100%</div>
+        <div class="h-stat-label">Circular Economy</div>
       </div>
     </div>
+
   </div>
 </section>
 
-<!-- MARQUEE -->
-<div class="marquee-section">
+
+<!-- ═══════════════════════════════════════════
+     MARQUEE TICKER
+═══════════════════════════════════════════ -->
+<div class="marquee-wrap" aria-hidden="true">
   <div class="marquee-track" id="marquee">
+    <span class="marquee-item"><span class="marquee-dot"></span>Solid Waste Management</span>
     <span class="marquee-item"><span class="marquee-dot"></span>Textile Waste</span>
     <span class="marquee-item"><span class="marquee-dot"></span>Paper Scrap</span>
     <span class="marquee-item"><span class="marquee-dot"></span>Plastic Waste</span>
     <span class="marquee-item"><span class="marquee-dot"></span>Aluminum Scrap</span>
     <span class="marquee-item"><span class="marquee-dot"></span>Copper Scrap</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>Iron & Metal Scrap</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Iron &amp; Metal Scrap</span>
     <span class="marquee-item"><span class="marquee-dot"></span>Circular Economy</span>
     <span class="marquee-item"><span class="marquee-dot"></span>Pan India Network</span>
     <span class="marquee-item"><span class="marquee-dot"></span>Resource Recovery</span>
-    <!-- Duplicate for seamless scroll -->
+    <span class="marquee-item"><span class="marquee-dot"></span>Waste Generators</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Recyclers & Manufacturers</span>
+    <!-- Duplicate for seamless loop -->
+    <span class="marquee-item"><span class="marquee-dot"></span>Solid Waste Management</span>
     <span class="marquee-item"><span class="marquee-dot"></span>Textile Waste</span>
     <span class="marquee-item"><span class="marquee-dot"></span>Paper Scrap</span>
     <span class="marquee-item"><span class="marquee-dot"></span>Plastic Waste</span>
     <span class="marquee-item"><span class="marquee-dot"></span>Aluminum Scrap</span>
     <span class="marquee-item"><span class="marquee-dot"></span>Copper Scrap</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>Iron & Metal Scrap</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Iron &amp; Metal Scrap</span>
     <span class="marquee-item"><span class="marquee-dot"></span>Circular Economy</span>
     <span class="marquee-item"><span class="marquee-dot"></span>Pan India Network</span>
     <span class="marquee-item"><span class="marquee-dot"></span>Resource Recovery</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Waste Generators</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Recyclers & Manufacturers</span>
   </div>
 </div>
 
-<!-- ABOUT -->
-<section id="about">
+
+<!-- ═══════════════════════════════════════════
+     ABOUT SECTION
+═══════════════════════════════════════════ -->
+<section id="about" class="section-pad" aria-labelledby="about-title">
   <div class="container">
     <div class="about-grid">
+
       <div class="reveal">
-        <div class="section-label">About Us</div>
-        <h2 class="section-title">Building India's Recyclable Materials Ecosystem</h2>
-        <p style="color:var(--text-muted);line-height:1.8;margin-bottom:1.5rem">Texuvo Recycling Solution Pvt. Ltd. is committed to connecting every node in the recycling chain — from waste generators to recyclers to manufacturers — ensuring materials never end up wasted.</p>
-        <p style="color:var(--text-muted);line-height:1.8">We work with industries and traders across India to ensure efficient material sourcing, resource recovery, and responsible waste management practices.</p>
-      </div>
-      <div class="about-visual reveal reveal-delay-1">
-        <div class="about-stat-card">
-          <div class="about-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-          </div>
-          <div class="num">Pan India</div>
-          <div class="lbl">Supplier Network</div>
-        </div>
-        <div class="about-stat-card">
-          <div class="about-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-          </div>
-          <div class="num">6+</div>
-          <div class="lbl">Material Categories</div>
-        </div>
-        <div class="about-stat-card">
-          <div class="about-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <div class="num">Trusted</div>
-          <div class="lbl">Recycling Partner</div>
-        </div>
-        <div class="about-stat-card">
-          <div class="about-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
-          </div>
-          <div class="num">Circular</div>
-          <div class="lbl">Economy Focus</div>
+        <span class="section-label">About Us</span>
+        <h2 id="about-title" class="section-title">
+          India's Solid Waste Sourcing &amp; Recycling Ecosystem
+        </h2>
+        <p class="section-sub" style="margin-bottom:1.25rem">
+          Texuvo Recycling Solution Pvt. Ltd. is committed to building a sustainable
+          ecosystem for recyclable materials in India. We work at the intersection of
+          waste generation and responsible recovery — channeling industrial waste,
+          post-consumer materials, and manufacturing scrap into productive circular
+          supply chains.
+        </p>
+        <p class="section-sub" style="margin-bottom:1.8rem">
+          We partner with industries, traders, waste generators, recyclers and
+          manufacturers to ensure efficient material sourcing, resource recovery and
+          responsible solid waste management practices across India.
+        </p>
+        <div class="about-chips">
+          <span class="chip">Solid Waste Management</span>
+          <span class="chip">Circular Economy</span>
+          <span class="chip">Resource Recovery</span>
+          <span class="chip">Pan India Network</span>
+          <span class="chip">B2B Recycling</span>
         </div>
       </div>
+
+      <div class="about-card-grid reveal delay-2">
+        <div class="a-card">
+          <div class="a-card-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div class="a-card-num">Pan India</div>
+          <div class="a-card-label">Supplier Network</div>
+        </div>
+        <div class="a-card">
+          <div class="a-card-icon">
+            <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          </div>
+          <div class="a-card-num" data-count="6" data-suffix="+">6+</div>
+          <div class="a-card-label">Material Categories</div>
+        </div>
+        <div class="a-card">
+          <div class="a-card-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="a-card-num">Certified</div>
+          <div class="a-card-label">Registered Pvt. Ltd.</div>
+        </div>
+        <div class="a-card">
+          <div class="a-card-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
+          </div>
+          <div class="a-card-num">Circular</div>
+          <div class="a-card-label">Economy Focused</div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- MATERIALS -->
-<section id="materials" class="materials-section">
+
+<!-- ═══════════════════════════════════════════
+     COMPANY PROFILE SECTION
+═══════════════════════════════════════════ -->
+<section id="profile" class="section-pad" aria-labelledby="profile-title">
   <div class="container">
-    <div class="centered reveal">
-      <div class="section-label">What We Handle</div>
-      <h2 class="section-title">Materials We Deal In</h2>
-      <p class="section-sub">From industrial textile waste to high-value metal scrap — we source, connect and recover across all major recyclable material categories.</p>
+    <div class="text-center reveal" style="margin-bottom:3.5rem">
+      <span class="section-label">Company Profile</span>
+      <h2 id="profile-title" class="section-title">Who We Are</h2>
+      <p class="section-sub">A registered private limited company dedicated to solid waste management and recyclable material sourcing across India.</p>
     </div>
+
+    <div class="profile-grid">
+
+      <div class="reveal">
+        <div class="profile-table">
+          <div class="profile-table-header">Company Details</div>
+          <div class="profile-row">
+            <div class="profile-key">Company</div>
+            <div class="profile-val">Texuvo Recycling Solution Pvt. Ltd.</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-key">Type</div>
+            <div class="profile-val">Private Limited Company</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-key">Industry</div>
+            <div class="profile-val">Solid Waste Management &amp; Recycling</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-key">Operations</div>
+            <div class="profile-val">Pan India</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-key">Focus Areas</div>
+            <div class="profile-val">Waste Sourcing, Resource Recovery, Circular Economy</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-key">Contact</div>
+            <div class="profile-val">Manoj@texuvo.com | +91 93115 03676</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-key">Vision</div>
+            <div class="profile-val">India's #1 Waste Sourcing &amp; Recycling Partner</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-pillars reveal delay-2">
+        <div class="pillar-card">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg>
+          </div>
+          <div>
+            <div class="pillar-title">Our Mission</div>
+            <div class="pillar-desc">To build India's most reliable solid waste sourcing and recycling supply chain, ensuring no recyclable material ever goes to landfill.</div>
+          </div>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <div>
+            <div class="pillar-title">Our Vision</div>
+            <div class="pillar-desc">To become India's leading waste sourcing and recycling partner — supporting resource recovery industries and promoting sustainable development.</div>
+          </div>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <div>
+            <div class="pillar-title">Who We Serve</div>
+            <div class="pillar-desc">Industries, traders, waste generators, recyclers, and manufacturers — anyone in the solid waste and recycling value chain across India.</div>
+          </div>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <div>
+            <div class="pillar-title">Our Commitment</div>
+            <div class="pillar-desc">Every tonne of recyclable material diverted from landfill contributes to resource conservation, energy savings and environmental sustainability.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     MATERIALS SECTION
+═══════════════════════════════════════════ -->
+<section id="materials" class="section-pad" aria-labelledby="materials-title">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-label">Recyclable Materials</span>
+      <h2 id="materials-title" class="section-title">Materials We Deal In</h2>
+      <p class="section-sub">
+        From industrial textile waste to high-value metal scrap — we source, connect and
+        recover across all major solid waste and recyclable material categories.
+      </p>
+    </div>
+
     <div class="materials-grid">
-      <div class="mat-card reveal reveal-delay-1">
+
+      <div class="mat-card reveal delay-1">
         <div class="mat-icon">
           <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
         </div>
-        <h3>Textile Waste</h3>
-        <p>Industrial textile waste, cutting waste, and recyclable fabric materials sourced from garment manufacturers.</p>
+        <h3 class="mat-title">Textile Waste</h3>
+        <p class="mat-desc">Industrial cutting waste, fabric offcuts, garment scraps, and post-industrial textile waste from manufacturing units.</p>
+        <span class="mat-tag">Fabric · Cutting Waste · Industrial</span>
       </div>
-      <div class="mat-card reveal reveal-delay-2">
+
+      <div class="mat-card reveal delay-2">
         <div class="mat-icon">
           <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
         </div>
-        <h3>Paper Waste</h3>
-        <p>Paper scrap and recyclable paper materials sourced for efficient resource recovery and repulping.</p>
+        <h3 class="mat-title">Paper Waste</h3>
+        <p class="mat-desc">Old corrugated cartons (OCC), white ledger paper, newsprint, mixed paper, and industrial paper scrap for repulping.</p>
+        <span class="mat-tag">OCC · Newsprint · Office Waste</span>
       </div>
-      <div class="mat-card reveal reveal-delay-3">
+
+      <div class="mat-card reveal delay-3">
         <div class="mat-icon">
           <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
         </div>
-        <h3>Plastic Waste</h3>
-        <p>Recyclable plastic materials supporting circular economy — post-consumer and post-industrial grades.</p>
+        <h3 class="mat-title">Plastic Waste</h3>
+        <p class="mat-desc">Post-consumer and post-industrial HDPE, PET, PP, PVC, and mixed plastic waste supporting circular economy solutions.</p>
+        <span class="mat-tag">HDPE · PET · PP · PVC</span>
       </div>
-      <div class="mat-card reveal reveal-delay-1">
+
+      <div class="mat-card reveal delay-1">
         <div class="mat-icon">
           <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
         </div>
-        <h3>Aluminum Scrap</h3>
-        <p>Recyclable aluminum materials supporting sustainable metal recovery and secondary aluminium production.</p>
+        <h3 class="mat-title">Aluminum Scrap</h3>
+        <p class="mat-desc">Aluminium extrusion, sheet scrap, UBC (used beverage cans), casting scrap, and industrial aluminum offcuts.</p>
+        <span class="mat-tag">Extrusion · UBC · Casting</span>
       </div>
-      <div class="mat-card reveal reveal-delay-2">
+
+      <div class="mat-card reveal delay-2">
         <div class="mat-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 22V2M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm0 0v20M2 12h20"/></svg>
         </div>
-        <h3>Copper Scrap</h3>
-        <p>High-value copper scrap for recycling and manufacturing — wires, tubes, and industrial offcuts.</p>
+        <h3 class="mat-title">Copper Scrap</h3>
+        <p class="mat-desc">High-value copper wire, tubing, bus bars, motor windings, and manufacturing offcuts for recycling and secondary smelting.</p>
+        <span class="mat-tag">Wire · Tubes · Bus Bar</span>
       </div>
-      <div class="mat-card reveal reveal-delay-3">
+
+      <div class="mat-card reveal delay-3">
         <div class="mat-icon">
-          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
         </div>
-        <h3>Iron & Metal Scrap</h3>
-        <p>Industrial metal scrap of all grades sourced for efficient recycling, reuse, and downstream manufacturing.</p>
+        <h3 class="mat-title">Iron &amp; Metal Scrap</h3>
+        <p class="mat-desc">HMS 1&2, shredded steel, stainless steel scrap, cast iron, and mixed ferrous/non-ferrous industrial metal scrap.</p>
+        <span class="mat-tag">HMS · Shredded · Stainless</span>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- VALUE -->
-<section id="value">
-  <div class="container">
-    <div class="centered reveal">
-      <div class="section-label">Our Impact</div>
-      <h2 class="section-title">How Texuvo Creates Value</h2>
-      <p class="section-sub">We serve three essential stakeholders in the recycling chain — each benefiting from our reliable network and sourcing expertise.</p>
-    </div>
-    <div class="value-grid">
-      <div class="val-card reveal reveal-delay-1">
-        <div class="val-num">01</div>
-        <h3>For Waste Generators</h3>
-        <p>We help industries and businesses channel recyclable materials into the recycling ecosystem — providing reliable off-take and maximising recovery value.</p>
-      </div>
-      <div class="val-card reveal reveal-delay-2">
-        <div class="val-num">02</div>
-        <h3>For Recyclers</h3>
-        <p>We support recyclers by ensuring continuous, consistent availability of recyclable materials tailored to their processing requirements and quality standards.</p>
-      </div>
-      <div class="val-card reveal reveal-delay-3">
-        <div class="val-num">03</div>
-        <h3>For The Environment</h3>
-        <p>Every tonne diverted from landfill conserves natural resources, saves energy, and reduces carbon emissions — making every transaction a climate action.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- WHY TEXUVO -->
-<section class="why-section">
+<!-- ═══════════════════════════════════════════
+     QUERY SECTION
+═══════════════════════════════════════════ -->
+<section id="query" class="section-pad" aria-labelledby="query-title">
   <div class="container">
-    <div class="centered reveal">
-      <div class="section-label">Why Us</div>
-      <h2 class="section-title">Why Choose Texuvo</h2>
-    </div>
-    <div class="why-grid reveal reveal-delay-1">
-      <div class="why-item">
-        <div class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-        Reliable Material Sourcing Network
-      </div>
-      <div class="why-item">
-        <div class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-        Pan India Supplier & Recycler Connections
-      </div>
-      <div class="why-item">
-        <div class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-        Sustainable Resource Recovery Solutions
-      </div>
-      <div class="why-item">
-        <div class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-        Quality-Focused Material Supply
-      </div>
-      <div class="why-item">
-        <div class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-        Strong Industry Partnerships
-      </div>
-      <div class="why-item">
-        <div class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-        Circular Economy Commitment
-      </div>
-    </div>
-  </div>
-</section>
+    <div class="query-grid">
 
-<!-- VISION -->
-<section class="vision-section">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-label">Our Vision</div>
-      <h2 class="section-title">Where We're Headed</h2>
-    </div>
-    <div class="vision-box reveal reveal-delay-1">
-      <p>To become India's leading waste sourcing and recycling partner by building a reliable supply chain for recyclable materials — supporting resource recovery industries and promoting sustainable development through circular economy practices across every state and sector.</p>
-    </div>
-  </div>
-</section>
+      <div class="reveal">
+        <span class="section-label">Submit a Query</span>
+        <h2 id="query-title" class="section-title">Tell Us What You Need</h2>
+        <p class="section-sub" style="margin-bottom:2rem">
+          Whether you are a waste generator looking for reliable off-take, a recycler
+          seeking consistent material supply, or a manufacturer needing secondary raw
+          materials — we can help.
+        </p>
 
-<!-- CONTACT -->
-<section id="contact" class="contact-section">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-label">Get In Touch</div>
-      <h2 class="section-title">Let's Work Together</h2>
-      <p style="color:var(--text-muted);max-width:500px;line-height:1.7">Looking for reliable recyclable material sourcing, recovery solutions, or long-term recycling partnerships? Reach out to us.</p>
-    </div>
-    <div class="contact-grid">
-      <div class="contact-info reveal reveal-delay-1">
-        <div class="contact-channels">
-          <a href="mailto:Manoj@texuvo.com" class="channel">
-            <div class="ch-icon">
-              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            </div>
-            <div>
-              <div class="ch-label">Email Us</div>
-              <div class="ch-val">Manoj@texuvo.com</div>
-            </div>
-          </a>
-          <a href="tel:+919311503676" class="channel">
-            <div class="ch-icon">
-              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v3h-.08"/></svg>
-            </div>
-            <div>
-              <div class="ch-label">Call Us</div>
-              <div class="ch-val">+91 93115 03676</div>
-            </div>
-          </a>
-          <a href="https://wa.me/919311503676" target="_blank" class="channel">
-            <div class="ch-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="var(--green-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
-            </div>
-            <div>
-              <div class="ch-label">WhatsApp</div>
-              <div class="ch-val">Chat With Us</div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="contact-form reveal reveal-delay-2">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="fname">Your Name</label>
-            <input type="text" id="fname" placeholder="Rahul Sharma">
+        <div class="query-highlights">
+          <div class="q-highlight">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Guaranteed response within 24 hours
           </div>
-          <div class="form-group">
-            <label for="fphone">Phone Number</label>
-            <input type="tel" id="fphone" placeholder="+91 98765 43210">
+          <div class="q-highlight">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            All material types and quantities welcome
+          </div>
+          <div class="q-highlight">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Pan India pickup and delivery
+          </div>
+          <div class="q-highlight">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Transparent pricing and long-term partnerships
+          </div>
+          <div class="q-highlight">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Responsible and documented waste handling
           </div>
         </div>
-        <div class="form-group" style="margin-bottom:1rem">
-          <label for="femail">Email Address</label>
-          <input type="email" id="femail" placeholder="you@company.com">
-        </div>
-        <div class="form-group" style="margin-bottom:1rem">
-          <label for="ftype">I Am A</label>
-          <select id="ftype">
-            <option value="">Select your role</option>
-            <option>Waste Generator / Industry</option>
-            <option>Recycler / Processor</option>
-            <option>Trader / Aggregator</option>
-            <option>Manufacturer</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div class="form-group" style="margin-bottom:1rem">
-          <label for="fmsg">Message</label>
-          <textarea id="fmsg" placeholder="Tell us about your requirements — material type, quantity, location..."></textarea>
-        </div>
-        <button class="form-submit" onclick="handleSubmit()">Send Message →</button>
       </div>
+
+      <div class="reveal delay-2">
+        <form class="query-form" id="queryForm" novalidate>
+          <div class="form-title">Send us your requirement</div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="q_name">Full Name *</label>
+              <input type="text" id="q_name" name="q_name" placeholder="Rahul Sharma" required />
+            </div>
+            <div class="form-group">
+              <label for="q_phone">Phone Number *</label>
+              <input type="tel" id="q_phone" name="q_phone" placeholder="+91 98765 43210" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="q_email">Email Address</label>
+            <input type="email" id="q_email" name="q_email" placeholder="you@company.com" />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="q_role">I Am A</label>
+              <select id="q_role" name="q_role">
+                <option value="">Select role</option>
+                <option>Waste Generator / Industry</option>
+                <option>Recycler / Processor</option>
+                <option>Trader / Aggregator</option>
+                <option>Manufacturer</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="q_material">Material Type</label>
+              <select id="q_material" name="q_material">
+                <option value="">Select material</option>
+                <option>Textile Waste</option>
+                <option>Paper Waste</option>
+                <option>Plastic Waste</option>
+                <option>Aluminum Scrap</option>
+                <option>Copper Scrap</option>
+                <option>Iron &amp; Metal Scrap</option>
+                <option>Multiple / Mixed</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="q_message">Message / Requirements</label>
+            <textarea id="q_message" name="q_message" placeholder="Tell us about your requirement — quantity, location, frequency, quality specs…"></textarea>
+          </div>
+
+          <button type="submit" class="form-submit">Send via WhatsApp →</button>
+          <p class="form-note">Your message will open in WhatsApp for instant delivery.</p>
+        </form>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/919311503676" target="_blank" class="wa-float">
-  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  WhatsApp Us
-</a>
 
-<!-- FOOTER -->
-<footer>
+<!-- ═══════════════════════════════════════════
+     CONTACT SECTION
+═══════════════════════════════════════════ -->
+<section id="contact" class="section-pad" aria-labelledby="contact-title">
+  <div class="container">
+
+    <div class="text-center reveal">
+      <span class="section-label">Contact Us</span>
+      <h2 id="contact-title" class="section-title">Get In Touch</h2>
+      <p class="section-sub">
+        Looking for reliable recyclable material sourcing, recovery solutions, or
+        long-term recycling partnerships? Connect with Texuvo today.
+      </p>
+    </div>
+
+    <div class="contact-top">
+
+      <a href="mailto:Manoj@texuvo.com" class="contact-channel reveal delay-1">
+        <div class="ch-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div class="ch-type">Email</div>
+        <div class="ch-value">Manoj@texuvo.com</div>
+      </a>
+
+      <a href="tel:+919311503676" class="contact-channel reveal delay-2">
+        <div class="ch-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v3h-.08"/></svg>
+        </div>
+        <div class="ch-type">Call Us</div>
+        <div class="ch-value">+91 93115 03676</div>
+      </a>
+
+      <a href="https://wa.me/919311503676" target="_blank" rel="noopener" class="contact-channel reveal delay-3">
+        <div class="ch-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+        </div>
+        <div class="ch-type">WhatsApp</div>
+        <div class="ch-value">Chat With Us</div>
+      </a>
+
+    </div>
+
+    <div class="contact-map reveal" style="margin-top:2rem">
+      <h3>Business Address</h3>
+      <p style="margin-top:0.6rem">
+        Texuvo Recycling Solution Pvt. Ltd.<br />
+        India — Pan India Operations<br />
+        <strong style="color:var(--green-accent)">Email:</strong> Manoj@texuvo.com &nbsp;|&nbsp;
+        <strong style="color:var(--green-accent)">Phone:</strong> +91 93115 03676
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════ -->
+<footer id="footer" aria-label="Footer">
   <div class="footer-inner">
-    <img src="TEXUVO__2__Final-removebg-preview 1.png" alt="Texuvo Logo" class="footer-logo">
-    <p class="footer-tagline">Waste Sourcing · Resource Recovery · Recycling Solutions</p>
-    <div class="footer-links">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#materials">Materials</a>
-      <a href="#value">Value</a>
-      <a href="#contact">Contact</a>
+
+    <div class="footer-brand">
+      <img src="TEXUVO__2__Final-removebg-preview 1.png" alt="Texuvo Recycling Solution" />
+      <p>India's trusted solid waste sourcing and recycling partner — connecting generators, recyclers and manufacturers for a cleaner tomorrow.</p>
     </div>
-    <p class="footer-copy">© 2026 Texuvo Recycling Solution Pvt. Ltd. All Rights Reserved.</p>
+
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#profile">Company Profile</a></li>
+        <li><a href="#query">Submit Query</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Materials</h4>
+      <ul>
+        <li><a href="#materials">Textile Waste</a></li>
+        <li><a href="#materials">Paper Scrap</a></li>
+        <li><a href="#materials">Plastic Waste</a></li>
+        <li><a href="#materials">Metal Scrap</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:Manoj@texuvo.com">Manoj@texuvo.com</a></li>
+        <li><a href="tel:+919311503676">+91 93115 03676</a></li>
+        <li><a href="https://wa.me/919311503676" target="_blank" rel="noopener">WhatsApp Chat</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom" style="padding:0 1.5rem">
+    <p>© 2026 Texuvo Recycling Solution Pvt. Ltd. All Rights Reserved.</p>
+    <p>Waste Sourcing · Resource Recovery · Recycling Solutions</p>
   </div>
 </footer>
 
-<script>
-// Sticky header
-const header = document.getElementById('site-header');
-window.addEventListener('scroll', () => {
-  header.classList.toggle('scrolled', window.scrollY > 40);
-});
 
-// Mobile nav
-const ham = document.getElementById('hamburger');
-const mobileNav = document.getElementById('mobile-nav');
-ham.addEventListener('click', () => mobileNav.classList.toggle('open'));
-mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.classList.remove('open')));
+<!-- ═══════════════════════════════════════════
+     WHATSAPP FLOAT
+═══════════════════════════════════════════ -->
+<a href="https://wa.me/919311503676" target="_blank" rel="noopener" class="wa-float" aria-label="Chat with us on WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span>WhatsApp Us</span>
+</a>
 
-// Reveal on scroll
-const reveals = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-}, { threshold: 0.12 });
-reveals.forEach(el => observer.observe(el));
 
-// Form submit
-function handleSubmit() {
-  const name = document.getElementById('fname').value.trim();
-  const phone = document.getElementById('fphone').value.trim();
-  const email = document.getElementById('femail').value.trim();
-  const type = document.getElementById('ftype').value;
-  const msg = document.getElementById('fmsg').value.trim();
-  if (!name || !phone) { alert('Please fill in your name and phone number.'); return; }
-  const waMsg = encodeURIComponent(`Hello Texuvo!\n\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\nI am a: ${type}\n\nMessage: ${msg}`);
-  window.open(`https://wa.me/919311503676?text=${waMsg}`, '_blank');
-}
-</script>
+<!-- ═══════════════════════════════════════════
+     LOGIN / REGISTER MODAL
+═══════════════════════════════════════════ -->
+<div class="modal-overlay" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-box">
+
+    <button class="modal-close" id="modalClose" aria-label="Close login modal">&#x2715;</button>
+
+    <img src="TEXUVO__2__Final-removebg-preview 1.png" alt="Texuvo" class="modal-logo" />
+    <h2 class="modal-title" id="modal-title">Welcome Back</h2>
+    <p class="modal-subtitle">Login to your Texuvo partner account or create a new one.</p>
+
+    <div class="modal-tabs" role="tablist">
+      <button class="modal-tab active" data-panel="loginPanel" role="tab" aria-selected="true" aria-controls="loginPanel">Login</button>
+      <button class="modal-tab" data-panel="registerPanel" role="tab" aria-selected="false" aria-controls="registerPanel">Register</button>
+    </div>
+
+    <!-- LOGIN PANEL -->
+    <div class="login-panel active" id="loginPanel" role="tabpanel">
+      <form class="modal-form" id="loginForm" novalidate>
+        <div class="form-group">
+          <label for="login_email">Email Address</label>
+          <input type="email" id="login_email" name="email" placeholder="you@company.com" autocomplete="email" />
+        </div>
+        <div class="form-group">
+          <label for="login_pass">Password</label>
+          <input type="password" id="login_pass" name="password" placeholder="Enter your password" autocomplete="current-password" />
+        </div>
+        <button type="submit" class="form-submit" style="margin-top:0.8rem">Login to Account</button>
+        <div class="modal-divider">or</div>
+        <a href="https://wa.me/919311503676" target="_blank" rel="noopener" class="btn btn-ghost" style="width:100%;justify-content:center;font-size:14px">
+          Continue via WhatsApp
+        </a>
+        <p class="modal-footer-text" style="margin-top:1rem">
+          Forgot password? <a href="mailto:Manoj@texuvo.com">Contact support</a>
+        </p>
+      </form>
+    </div>
+
+    <!-- REGISTER PANEL -->
+    <div class="login-panel" id="registerPanel" role="tabpanel">
+      <form class="modal-form" id="registerForm" novalidate>
+        <div class="form-group">
+          <label for="reg_name">Full Name</label>
+          <input type="text" id="reg_name" name="reg_name" placeholder="Your full name" autocomplete="name" />
+        </div>
+        <div class="form-group">
+          <label for="reg_email">Email Address</label>
+          <input type="email" id="reg_email" name="reg_email" placeholder="you@company.com" autocomplete="email" />
+        </div>
+        <div class="form-group">
+          <label for="reg_phone">Phone Number</label>
+          <input type="tel" id="reg_phone" name="reg_phone" placeholder="+91 98765 43210" autocomplete="tel" />
+        </div>
+        <div class="form-group">
+          <label for="reg_password">Password (min 8 chars)</label>
+          <input type="password" id="reg_password" name="reg_password" placeholder="Create a password" autocomplete="new-password" minlength="8" />
+        </div>
+        <button type="submit" class="form-submit" style="margin-top:0.8rem">Create Account</button>
+        <p class="modal-footer-text">
+          By registering you agree to our <a href="mailto:Manoj@texuvo.com">terms of service</a>.
+        </p>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+<!-- Toast Notification -->
+<div id="toast" role="status" aria-live="polite"></div>
+
+<!-- Main JS -->
+<script src="js/main.js"></script>
+
 </body>
 </html>
